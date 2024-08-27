@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameworld</title>
+    <link rel="stylesheet" href="C:\Users\H4D0K\Desktop\Proyecto final\css\contacto.css">
+    <link rel="icon" href="C:\Users\H4D0K\Desktop\Proyecto final\imgs\Icono.ico" type="image/x-icon">
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+</head>
+<body>
+    
+    <header>
+        <!--Zona de la barra de navegación-->
+        <nav>
+            <h1>GAMEWORLD</h1>
+            <div class="links-list">
+                <!--Links a distintas partes de la web-->
+                <a href="C:\Users\H4D0K\Desktop\Proyecto final\index.html">Inicio</a>
+                <a href="C:\Users\H4D0K\Desktop\Proyecto final\views\presupuesto.html">Presupuesto</a>
+                <a href="C:\Users\H4D0K\Desktop\Proyecto final\views\galeria.html">Galeria</a>
+                <a href="C:\Users\H4D0K\Desktop\Proyecto final\views\contacto.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!--Zona donde se carga el mapa-->
+
+    <div id="mapa"></div>
+
+    <!--Script del mapa-->
+
+    <script> 
+    
+    var mimapa = L.map('mapa').setView([41.655716870491624, -0.9102090455866007], 10);
+    
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    { maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>' 
+    }).addTo(mimapa);
+    
+    L.marker([41.655716870491624, -0.9102090455866007],
+    {draggable: true}).addTo(mimapa);
+     </script> 
+
+    <!--Zona del pie de pagina-->
+    <footer>
+        <p>
+            Copyright - Todos los derechos reservados 2024 <br>
+            Av. de Navarra, 93, Delicias, 50017 Zaragoza
+        </p>
+        <div>
+            <a href="https://www.facebook.com" class="logo_link"><img src="C:\Users\H4D0K\Desktop\Proyecto final\imgs\124010.png" class="logo" alt="facebook"></a>
+            <a href="https://www.twitter.com" class="logo_link"><img src="C:\Users\H4D0K\Desktop\Proyecto final\imgs\twitter.png" class="logo" alt="twitter"></a>
+            <a href="https://www.instagram.com" class="logo_link"><img src="C:\Users\H4D0K\Desktop\Proyecto final\imgs\instalogo.png" class="logo" alt="instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
